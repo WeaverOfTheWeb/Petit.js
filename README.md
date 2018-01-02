@@ -1,4 +1,6 @@
-Quick and easy, client-side image compression with JavaScripts Canvas API! - [Demo](http://petit.lewisshaw.me/) 🎨🖼️
+# Petit.js 🎨🖼️
+
+Quick and easy, client-side image compression with JavaScripts Canvas API! - [Demo](http://petit.lewisshaw.me/)
 
 ```html
 <script type="text/javascript">
