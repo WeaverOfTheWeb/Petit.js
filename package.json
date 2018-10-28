@@ -1,0 +1,38 @@
+{
+  "name": "petit",
+  "version": "1.0.0",
+  "description": "Quick and easy, client-side image compression with JavaScripts Canvas API",
+  "main": "petit.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --compilers js:@babel/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iRuisu/Petit.js.git"
+  },
+  "keywords": [
+    "Quick",
+    "easy",
+    "client-side",
+    "image",
+    "compression",
+    "JavaScripts",
+    "Canvas",
+    "API"
+  ],
+  "author": "iRuisu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iRuisu/Petit.js/issues"
+  },
+  "homepage": "https://github.com/iRuisu/Petit.js#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "filereader": "^0.10.3",
+    "mocha": "^5.2.0"
+  }
+}
