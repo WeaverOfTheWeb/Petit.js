@@ -36,6 +36,6 @@ Quick and easy, client-side image compression with JavaScripts Canvas API! - [De
 ```
 ## Change Log
 
-__1.0.0__
+__1.0.1__
 
 - Initial release
