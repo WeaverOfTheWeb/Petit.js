@@ -28,10 +28,14 @@ Quick and easy, client-side image compression with JavaScripts Canvas API! - [De
 		/* Catch Errors */
 		onError: function(e) {console.error( e )}
 	});
+
+	// load in the file
+	image.loadFile({file:'file path'})
+
 </script>
 ```
 ## Change Log
 
-__1.0.0__
+__1.0.1__
 
 - Initial release

@@ -1,27 +1,32 @@
 "use strict";
 
+let FileReader = require('filereader');
+
+
 /* toBlob Polyfill */
-if (!HTMLCanvasElement.prototype.toBlob) {
-	Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
-		value: function(callback, type, quality) {
-			var canvas = this;
-			setTimeout(function() {
+if(typeof(HTMLCanvasElement) !== 'undefined'){
+	if (!HTMLCanvasElement.prototype.toBlob) {
+		Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
+			value: function(callback, type, quality) {
+				var canvas = this;
+				setTimeout(function() {
 
-				var binStr = atob(canvas.toDataURL(type, quality).split(',')[1]),
-					len = binStr.length,
-					arr = new Uint8Array(len);
+					var binStr = atob(canvas.toDataURL(type, quality).split(',')[1]),
+						len = binStr.length,
+						arr = new Uint8Array(len);
 
-				for (var i = 0; i < len; i++) {
-					arr[i] = binStr.charCodeAt(i);
-				}
+					for (var i = 0; i < len; i++) {
+						arr[i] = binStr.charCodeAt(i);
+					}
 
-				callback(new Blob([arr], {
-					type: type || 'image/png'
-				}));
+					callback(new Blob([arr], {
+						type: type || 'image/png'
+					}));
 
-			});
-		}
-	});
+				});
+			}
+		});
+	}
 }
 
 class Petit {
@@ -130,3 +135,6 @@ class Petit {
 		}
 	}
 }
+
+(typeof(module) == 'undefined') ? '': module.exports = Petit;
+
