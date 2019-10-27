@@ -4,7 +4,7 @@ Quick and easy, client-side image compression with JavaScripts Canvas API! - [De
 
 ```html
 <script type="text/javascript">
-    var image = new Petit({
+    const image = new Petit({
 		/* Quality ranges from 0 - 1 */
 		quality: .92,
 		/* JPEG or PNG, no compression with PNG */
